@@ -6,18 +6,18 @@ class Solution {
         while(min<=max)
         {
             int mid=(min+max)>>1;
-            System.out.println("MID is   " +mid);
+           // System.out.println("MID is   " +mid);
             if(check(piles,mid,h))
             {
                 ans=mid;
                 max=mid-1;
-                 System.out.println("MAX is   " +max);
+               //  System.out.println("MAX is   " +max);
             }
             else
             {
                 
                 min=mid+1;
-                System.out.println("MIN is   " +min);
+               // System.out.println("MIN is   " +min);
             }
         }
         return ans;
