@@ -11,7 +11,7 @@ class Solution {
             {
                 a[tasks[i]-'A']++;
             }
-            System.out.print(Arrays.toString(a));
+            //System.out.print(Arrays.toString(a));
             for(int i=0;i<a.length;i++)
             {
                 if(m<a[i])
