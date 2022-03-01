@@ -1,6 +1,9 @@
 class Solution {
     public static int lengthOfLIS(int[] nums) {
-  //  int n=nums.length;
+        
+   int n=nums.length;
+   int[][] dp=new int[n][n];
+    return recursion(nums,-1,0,n,dp);
    // int max_length=0;
     //int max_elem=0;
   /*  for(int i=0;i<n;i++)
@@ -23,7 +26,7 @@ class Solution {
     }
     return max_length;
     */
-        int n = nums.length;
+     /*   int n = nums.length;
         int[] dp = new int[n];
         Arrays.fill(dp, 1);
         int max = 1;
@@ -35,5 +38,25 @@ class Solution {
             max = Math.max(max, dp[i]);
         }
         return max;
+        */
+        //return helper(-1,0,)
 }
+    static int recursion(int nums[],int prev,int curr,int n,int[][] dp)
+    {
+        if(curr==n)
+            return 0;
+         int op1=0;
+        if(prev!=-1 && dp[prev][curr]!=0)
+            return dp[prev][curr];
+        if(prev==-1 || nums[prev]<nums[curr])
+        {
+          op1=1+recursion(nums,curr,curr+1,n,dp);
+        }
+        int op2=recursion(nums,prev,curr+1,n,dp);
+        if(prev!=-1)
+        {
+          dp[prev][curr]=Math.max(op1,op2);
+        }
+        return Math.max(op1,op2);
+    }
 }
