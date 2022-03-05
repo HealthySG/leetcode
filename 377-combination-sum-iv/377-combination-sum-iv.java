@@ -11,7 +11,7 @@ class Solution {
             return 1;
         else if(target<0 || idx==nums.length)
             return 0;
-    	  String Key=target+"Satyam"+idx;
+    	  String Key=target+"Satyam";
         if(m.containsKey(Key))
         {
         	return m.get(Key);
