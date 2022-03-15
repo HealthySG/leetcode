@@ -10,7 +10,7 @@ class Solution {
             for(int j=0;j<q.size();j++)
             {
                 int i=q.remove();
-                System.out.println(i);
+                //System.out.println(i);
                 if(arr[i]==0)
                 {
                     return true;
