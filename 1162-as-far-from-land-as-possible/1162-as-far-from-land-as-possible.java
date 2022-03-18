@@ -45,12 +45,12 @@ class Solution {
        */
          int m = grid.length, n = grid[0].length;
         Queue<int[]> queue = new LinkedList<>();
-        boolean[][] visited = new boolean[m][n];
+      //  boolean[][] visited = new boolean[m][n];
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
                 if (grid[i][j] == 1) {
                     queue.add(new int[]{i, j});
-                    visited[i][j] = true;
+                   // visited[i][j] = true;
                 }
             }
         }
@@ -63,9 +63,9 @@ class Solution {
                 for (int[] dir : dirs) {
                     int r = point[0] + dir[0];
                     int c = point[1] + dir[1];
-                    if (r < 0 || r >= m || c < 0 || c >= n || visited[r][c]) continue;
+                    if (r < 0 || r >= m || c < 0 || c >= n || grid[r][c]==1) continue;
                     queue.add(new int[]{r, c});
-                    visited[r][c] = true;
+                    grid[r][c] = 1;
                 }
             }
             level++;
