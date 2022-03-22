@@ -19,3 +19,45 @@ private void backtrack(List<List<Integer>> list, List<Integer> tempList, int [] 
    }
 }
 }
+/*
+package com.leet;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class BackTracking {
+	public static void main(String args[])
+	{
+		Solution s=new Solution();
+		List<List<Integer>> l=s.permute(new int[] {1,2,3});
+		System.out.println(l);
+	}
+}
+class Solution {
+    public List<List<Integer>> permute(int[] nums) {
+        List<List<Integer>> l=new ArrayList<>();
+        List<Integer> arr=new ArrayList<>();
+         help(arr,nums,l);
+        return l;
+    }
+    void help(List<Integer> l,int[] nums, List<List<Integer>> lm)
+    {
+        if(l.size()==nums.length)
+        {
+        	lm.add(l);
+        }
+        else {
+	        for(int i=0;i<nums.length;i++)
+	        {
+	            if(!l.contains(nums[i]))
+	            {
+	                l.add(nums[i]);
+	               help(l,nums,lm); 
+	               l.remove(l.size() - 1);
+	            }
+	        }
+        }
+        //return l;
+    }
+}
+*/
