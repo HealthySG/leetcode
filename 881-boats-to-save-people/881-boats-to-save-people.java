@@ -17,7 +17,7 @@ class Solution {
                 j--;
             }
         }
-        System.out.println(ans);
+      //  System.out.println(ans);
         return ans+(l-2*ans);
        /* for(int i=0;i<people.length;)
         {
