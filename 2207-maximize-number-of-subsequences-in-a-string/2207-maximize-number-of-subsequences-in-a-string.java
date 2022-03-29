@@ -3,33 +3,18 @@ class Solution {
         /*int f=0,g=0,ind1=0,ind2=0;
         int l=text.length();
        int[] dp=new int[l];
-       if(text.charAt(0)==pattern.charAt(0))
+       for(int i=0;i<text.length();i++)
        {
-           dp[0]=1;
-           g++;
-       }
-       else
-       {
-           dp[0]=0;
-       }
-       for(int i=1;i<text.length();i++)
-       {
+           if(text.charAt(i)==pattern.charAt(1))
+           {
+               //System.out.println(f);
+              dp[i]=dp[i-1]+g;
+               f++;
+           }
            if(text.charAt(i)==pattern.charAt(0))
            {
                dp[i]=dp[i-1]+1;
                g++;
-           }
-           else if(text.charAt(i)==pattern.charAt(1) && f==0 && g!=0)
-           {
-               
-              dp[i]=dp[i-1];
-               f++;
-           }
-           else if(text.charAt(i)==pattern.charAt(1) && f!=0 && g!=0)
-           {
-               System.out.println(f);
-              dp[i]=dp[i-1]+2;
-               f++;
            }
            else
            {
