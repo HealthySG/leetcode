@@ -11,7 +11,7 @@ class Solution {
         while(low<=high)
         {
             int mid=(low+high)>>1;
-             System.out.println(mid);
+           //  System.out.println(mid);
             if(isPossible(mid,candies,k))
             {
                 ans=mid;
@@ -36,7 +36,7 @@ class Solution {
                
                
         }
-        System.out.println(f);
+       // System.out.println(f);
         if(f>=k)
         {
            return true; 
