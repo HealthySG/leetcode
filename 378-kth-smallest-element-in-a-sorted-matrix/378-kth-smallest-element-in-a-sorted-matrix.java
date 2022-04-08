@@ -8,7 +8,7 @@ class Solution {
             int j = n - 1;
             for (int i = 0; i < m; i++) {
                 while (j >= 0 && matrix[i][j] > mid)
-                    j--;
+                    j--; // means in each row we trwverse from backword column if iits less than fromm omid than we consider all it's previous element. 
                 count += j + 1;
             }
             if (count < k)
