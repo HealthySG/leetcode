@@ -5,7 +5,7 @@ class Solution {
         while(l<=h)
         {
           int   m=(l+(h))>>1;
-          System.out.println("Mid is " + m);
+         // System.out.println("Mid is " + m);
             if(ispossible(nums,m,len,threshold))
             {
                // res=m;
