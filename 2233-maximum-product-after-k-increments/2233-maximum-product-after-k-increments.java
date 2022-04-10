@@ -14,7 +14,7 @@ class Solution {
         }
         while(!pq.isEmpty())
         {
-            System.out.println(pq.peek());
+          //  System.out.println(pq.peek());
              ans=ans*(pq.poll()%mod);
              ans=ans%mod;
         }
