@@ -4,6 +4,7 @@ class Solution {
         int time=0;
         int prev=0;
         int n=colors.length();
+        //TWO POINTERS
         for(int i=1;i<n;i++)
         {
             if(a[i]!=a[prev])
@@ -15,12 +16,14 @@ class Solution {
                 if(neededTime[prev]<neededTime[i])
                 {
                     time+=neededTime[prev];
+                    System.out.println(time);
                     prev=i;
                 }
                 else
                 {
                     time+=neededTime[i];
-                   // prev=i;
+                    System.out.println(time);
+                    //prev=i;
                 }
             }
        /*     if(colors.charAt(i)==colors.charAt(i+1))
