@@ -24,7 +24,7 @@ class Solution {
             return null;
         }
         
-         System.out.println(count);
+        // System.out.println(count);
         temp=head;
         int startnode=(count-n);
         int g=1;
@@ -38,7 +38,7 @@ class Solution {
             temp=temp.next;
             g++;
         }
-        System.out.println(temp.val);
+        //System.out.println(temp.val);
         if(temp.next.next!=null)
             temp.next=temp.next.next;
         else
