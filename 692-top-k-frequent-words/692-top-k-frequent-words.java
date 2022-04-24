@@ -17,7 +17,7 @@ class Solution {
         
         /*TreeMap<String,Integer> sortedMap = new TreeMap<>(valueSort(tmap));*/
         Map<String,Integer> sortedMap=valueSort(tmap);
-        System.out.print("Map "+ sortedMap.toString());
+       // System.out.print("Map "+ sortedMap.toString());
         
         int i=0;
         for(Map.Entry<String,Integer> currentEntry :
