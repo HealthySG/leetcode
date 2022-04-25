@@ -46,11 +46,11 @@ class Solution {
             // update the maximum product ending at the current index
             max_ending = Integer.max(nums[i], Integer.max(nums[i] * max_ending,
                                                 nums[i] * min_ending));
-            System.out.println("max_ending" + max_ending);
+           // System.out.println("max_ending" + max_ending);
             // update the minimum product ending at the current index
             min_ending = Integer.min(nums[i], Integer.min(nums[i] * temp,
                                                 nums[i] * min_ending));
-           System.out.println("min_ending" + min_ending);
+          // System.out.println("min_ending" + min_ending);
             max_so_far = Integer.max(max_so_far, max_ending);
         }
         return max_so_far;
