@@ -7,14 +7,14 @@ class Solution {
             b_sum+=cardPoints[j++];
         }
         ans=b_sum;
-        System.out.println("b_sum --" + b_sum);
+        //System.out.println("b_sum --" + b_sum);
         j=l-k;
         while(i<k )
         {
             f_sum+=cardPoints[i];
-             System.out.println("f_sum --" + f_sum);
+         //    System.out.println("f_sum --" + f_sum);
             b_sum-=cardPoints[j+i];
-             System.out.println("b_sum --" + b_sum);
+           //  System.out.println("b_sum --" + b_sum);
             ans=Math.max(ans,f_sum+b_sum);
             i++;
         }
