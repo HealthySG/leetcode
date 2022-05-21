@@ -54,7 +54,7 @@ class Solution {
       }
 
       level++;
-     //System.out.println("level is " + level);
+     System.out.println("level is " + level);
     }
 
     return -1;
