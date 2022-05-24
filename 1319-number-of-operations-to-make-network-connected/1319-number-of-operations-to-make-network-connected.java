@@ -9,13 +9,13 @@ class Solution {
             int from=l[0];
             int to=l[1];
             
-            System.out.println("From parent-- " + find(from,parent));
-            System.out.println("to parent-- " + find(to,parent));
+          //  System.out.println("From parent-- " + find(from,parent));
+           // System.out.println("to parent-- " + find(to,parent));
             if(find(from,parent)==find(to,parent))
             {
                 cycle++;
             }
-            System.out.println("Cycle--"+ cycle);
+          //  System.out.println("Cycle--"+ cycle);
             union(from, to, parent);
             
         }
