@@ -19,7 +19,6 @@ class Solution {
             st.push(i); 
             }
         }
-      //  System.out.println(st.toString());
         if(st.isEmpty())
             return l;
         while(!st.isEmpty())
@@ -28,13 +27,7 @@ class Solution {
             len=Math.max(len,(l-1)-st.peek());
             l=st.pop();
         }
-       // System.out.println("l" +l);
         len=Math.max(len,l-0);
-       /*if(len==0 && l==y-1)
-       {
-           return y-1;
-       }
-       */
-            return len;
+        return len;
     }
 }
