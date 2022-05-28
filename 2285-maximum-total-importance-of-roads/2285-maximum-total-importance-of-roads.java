@@ -1,6 +1,6 @@
 class Solution {
     public long maximumImportance(int n, int[][] roads) {
-        TreeMap<Integer,Integer> tm=new TreeMap<>();
+      /*  TreeMap<Integer,Integer> tm=new TreeMap<>();
         for(int i=0;i<roads.length;i++)
         {
            for(int j=0;j<roads[0].length;j++)
@@ -36,10 +36,17 @@ class Solution {
            {
                ans+=tMap.get(roads[i][j]);
            }
-         }
-         
-        
+         }*/
+        long ans = 0, x = 1;
+		long degree[] = new long[n];
+        for(int road[] : roads){
+            degree[road[0]]++; 
+			degree[road[1]]++;
+        }
+        Arrays.sort(degree);
+        for(long i : degree) ans +=  i * (x++) ;
         return ans;
+    
     }
 public static <K, V extends Comparable<V> > Map<K, V> valueSort(Map<K, V> map)
 {
