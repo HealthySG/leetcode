@@ -6,9 +6,9 @@ class Solution {
         for(int i=0,j=0;j<l;j++)
         {
            p*=nums[j];
-           while(i<=j && p>=k)
+           while(i<=j && p>=k) //T.C:-[1,1,1] k=1
                p/=nums[i++];
-           c+=j-i+1;
+           c+=j-i+1; //every element will give us some number of subarrays 
         }
         return c;
     }
