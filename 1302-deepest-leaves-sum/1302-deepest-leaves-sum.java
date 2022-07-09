@@ -13,6 +13,7 @@
  *     }
  * }
  */
+/*//BFS sol :-
 class Solution {
     public int deepestLeavesSum(TreeNode root) {
         Queue<TreeNode> q=new LinkedList<>();
@@ -21,11 +22,11 @@ class Solution {
         while(!q.isEmpty())
         {
             int size=q.size();
-            boolean f=false;
+            boolean f=false; // sum=0 levelwise sum
             for(int i=0;i<size;i++)
             {
                 TreeNode t=q.poll();
-                if(!f)
+                if(!f) //not needed
                   sum+=t.val;
             //    System.out.println("sum " +sum);
                 if(t.left!=null)
@@ -44,5 +45,32 @@ class Solution {
             }
         }
         return (int)sum;
+    }
+}
+*/
+class Solution {
+    
+   private int maxLevel = 0;
+    private int sum = 0;
+    
+    public int deepestLeavesSum(TreeNode root) {
+        if(root == null) return 0;
+        calculateSumAtLevel(root,0);
+        return sum;
+        
+    }
+    
+    private void calculateSumAtLevel(TreeNode root,int level){
+        
+       if(root == null) return;
+        if(level > maxLevel){  //Main condition how can we did it in single pass.
+            sum = 0;
+            maxLevel = level;
+        }
+        if(level == maxLevel){
+            sum = sum + root.val; //calculated levelwise sum if node have same level.
+        }
+        calculateSumAtLevel(root.left,level+1);
+        calculateSumAtLevel(root.right,level+1);
     }
 }
