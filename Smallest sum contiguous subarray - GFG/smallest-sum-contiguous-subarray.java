@@ -36,11 +36,11 @@ class Solution
     {
         // your code here
         int ans=Integer.MAX_VALUE;
-        long sum=0; 
+        int sum=0; 
         for(int i=0;i<size;i++)
         {
             sum+=a[i];
-            ans=Math.min((int)sum,ans);
+            ans=Math.min(sum,ans);
             if(sum>0)
             {
                 sum=0;
