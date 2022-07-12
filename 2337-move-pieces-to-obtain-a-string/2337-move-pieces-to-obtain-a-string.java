@@ -24,7 +24,7 @@ class Solution {
                 if(k>=0 && f[k]=='R')
                 {
                     char temp=f[k];
-                    System.out.println(temp);
+               //     System.out.println(temp);
                     f[k]=f[i];
                     f[i]=temp;
                    
