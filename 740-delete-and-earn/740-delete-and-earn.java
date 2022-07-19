@@ -46,10 +46,26 @@ class Solution {
         System.out.println(Arrays.toString(dp));
         return dp[hm.size()-1];
         */
-          TreeMap<Integer, Integer> map = new TreeMap<>();
-		for (int num : nums) {
+       /* Map<Integer,Integer> map = new HashMap<>();
+        for (int num : nums) {
 			map.put(num, map.getOrDefault(num, 0) + 1);
-		}
+		}*/
+        int[] freq=new int[10002];
+        int[] dp=new int[10002];
+        
+        for(int i=0;i<nums.length;i++)
+        {
+            freq[nums[i]]++;
+        }
+        dp[0]=0;
+        dp[1]=1*freq[1];
+        for(int i=2;i<10002;i++)
+        {
+            dp[i]=Math.max(dp[i-2]+(i*freq[i]),dp[i-1]);
+        }
+        return dp[10001];
+        /*  TreeMap<Integer, Integer> map = new TreeMap<>();
+		
 
 		int prevSum = 0;
 		int currSum = 0;
@@ -67,7 +83,7 @@ class Solution {
 			prevKey = key;
 		}
 
-		return Math.max(prevSum, currSum);
+		return Math.max(prevSum, currSum);*/
     
     }
 }
