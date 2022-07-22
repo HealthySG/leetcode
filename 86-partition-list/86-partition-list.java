@@ -10,6 +10,7 @@
  */
 class Solution {
     public ListNode partition(ListNode head, int x) {
+       
         ListNode temp=head;    
          ListNode tail1=new ListNode(0);
           ListNode tail2=new ListNode(0);
@@ -20,6 +21,7 @@ class Solution {
             if(temp.val<x)
             {
                // tail1.next=new ListNode(temp.val);
+             
                  tail1.next=temp;  
                  tail1=tail1.next;
             }
@@ -34,5 +36,6 @@ class Solution {
         tail1.next=curr2.next;
         
         return curr1.next;
+         
     }
 }
