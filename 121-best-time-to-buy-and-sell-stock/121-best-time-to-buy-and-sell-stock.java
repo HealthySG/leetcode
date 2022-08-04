@@ -1,18 +1,15 @@
 class Solution {
     public int maxProfit(int[] prices) {
-        int msf=prices[0];
-        int maxp=0;
-        for(int i=0;i<prices.length;i++)
-        {
-             if(prices[i]<msf)
-             {
-                 msf=prices[i];
-             }
-             else if(prices[i]-msf>maxp)
-             {
-                 maxp=prices[i]-msf;
-             }
-        }
-        return maxp;
+          int currbuy=Integer.MAX_VALUE,ans=0;
+      for(int i=0;i<prices.length;i++)
+      {
+          if(currbuy>prices[i])
+          {
+              currbuy=prices[i];
+             // currbuy=0;
+          } 
+          ans=Math.max(ans,prices[i]-currbuy);
+      }
+        return ans;
     }
 }
