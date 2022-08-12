@@ -1,6 +1,6 @@
 class Solution {
     public int minDominoRotations(int[] tops, int[] bottoms) {
-     int[] a=new int[7];
+        int[] a=new int[7];
      int[] b=new int[7];   
       int[] same=new int[7];        
 
@@ -23,6 +23,5 @@ class Solution {
          }
      }
         return ans==Integer.MAX_VALUE?-1:ans;
-        
     }
 }
