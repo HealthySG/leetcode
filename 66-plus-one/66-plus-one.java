@@ -19,10 +19,11 @@ class Solution {
             carry=(a/10);
             digits[i]=a%10;
         }
-        int temp[]=new int[n+1];
+        
         
         if(carry!=0)
         {
+            int temp[]=new int[n+1];
             temp[0]=carry;
             for(int i=1;i<=n;i++)
             {
