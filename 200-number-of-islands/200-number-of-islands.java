@@ -1,8 +1,8 @@
-class Solution {
-    
+class Solution { 
+    int ans=0;
     public int numIslands(char[][] grid) {
+        
         int r=grid.length,c=grid[0].length;
- int ans=0;
        for(int i=0;i<r;i++)
        {
             for(int j=0;j<c;j++)
