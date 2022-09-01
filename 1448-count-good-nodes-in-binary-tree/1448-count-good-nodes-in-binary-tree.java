@@ -17,11 +17,10 @@ class Solution {
     int count=0;
     public int goodNodes(TreeNode root) {
          rec(root,root);
-         return count+1;
+         return count+1; // +1 for we count root also. 
     }
     void rec(TreeNode root,TreeNode prev)
     {
-        
         if(root.left!=null)
         {
             if(root.left.val<prev.val)
