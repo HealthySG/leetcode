@@ -15,7 +15,7 @@
  */
 class Solution {
     public TreeNode pruneTree(TreeNode root) {
-     TreeNode g=rec(root);
+         TreeNode g=rec(root);
       return g;
     }
      TreeNode rec(TreeNode root)
@@ -29,6 +29,5 @@ class Solution {
            return root;
          else
              return null;
-     }
-    
+    }
 }
