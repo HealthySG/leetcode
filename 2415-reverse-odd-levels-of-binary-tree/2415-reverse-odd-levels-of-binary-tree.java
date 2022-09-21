@@ -15,14 +15,14 @@
  */
 class Solution {
     public TreeNode reverseOddLevels(TreeNode root) {
-         rec(root.left,root.right,0);
+         rec(root.left,root.right,1);
          return root;
     }
     void rec(TreeNode root1,TreeNode root2,int level)
     {
         if(root1==null || root2==null)
             return;
-        if((level&1)==0)
+        if((level&1)==1)
         {
             int temp=root2.val;
             root2.val=root1.val;
