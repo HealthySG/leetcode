@@ -20,7 +20,7 @@ class Solution {
     boolean rec(TreeNode root,long max,long min)
     {
          boolean left=true,right=true;
-         System.out.println(root.val+" max "+ max + "min  " + min);   
+        // System.out.println(root.val+" max "+ max + "min  " + min);   
         if(root.val<=min || root.val>=max)
         {
             return false;
@@ -34,7 +34,7 @@ class Solution {
         {
              right=rec(root.right,max,root.val);
         }
-         System.out.println("left "+ left + "right" + right);
+       //  System.out.println("left "+ left + "right" + right);
         return left && right;
     }
 }
