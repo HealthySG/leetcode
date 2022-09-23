@@ -13,51 +13,28 @@
  *     }
  * }
  */
-/*class Solution {
-    public boolean isValidBST(TreeNode root) {
-        return rec(root);
-    }
-    boolean rec(TreeNode root)
-    {
-        if(root.left !=null)
-        {
-           if(root.left.val>=root.val)
-           {
-               return false;
-           }
-        }
-        if( root.right !=null)
-        {
-           if(root.right.val<=root.val)
-           {
-               return false;
-           }
-            return true;
-        }
-        if(root.left ==null && root.right ==null)
-            return true;
-        if(root.left ==null)
-            return true;
-        if(root.right ==null)
-            return true;
-        return rec(root.left) && rec(root.right); 
-    }
-}*/
 class Solution {
     public boolean isValidBST(TreeNode root) {
-        return isBST(root,Long.MIN_VALUE,Long.MAX_VALUE);
+       return rec(root,Long.MAX_VALUE,Long.MIN_VALUE);    
     }
-    boolean isBST(TreeNode root,long min,long max)
+    boolean rec(TreeNode root,long max,long min)
     {
-        if(root == null)
-            return true;
-        
-        System.out.println(root.val + " "+min + " "+max);
-        if(root.val <= min || root.val >= max)
+         boolean left=true,right=true;
+         System.out.println(root.val+" max "+ max + "min  " + min);   
+        if(root.val<=min || root.val>=max)
+        {
             return false;
-        
-        boolean left = isBST(root.left,min,root.val);
-        boolean right = isBST(root.right,root.val,max);
+        }
+        if(root.left!=null)
+        {
+             left=rec(root.left,root.val,min);
+         //   System.out.println(left);
+        }
+        if(root.right!=null)
+        {
+             right=rec(root.right,max,root.val);
+        }
+         System.out.println("left "+ left + "right" + right);
         return left && right;
     }
 }
