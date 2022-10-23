@@ -61,13 +61,13 @@ class Solution {
     }
     
 }
-class Pair
-{
-    int num;
-    int cost;
-    Pair(int num,int cost)
-    {
-        this.num=num;
-        this.cost=cost;
-    }
-}
+// class Pair
+// {
+//     int num;
+//     int cost;
+//     Pair(int num,int cost)
+//     {
+//         this.num=num;
+//         this.cost=cost;
+//     }
+// }
