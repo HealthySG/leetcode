@@ -1,11 +1,10 @@
 class Solution {
-    public int longestCommonSubsequence(String text1, String text2) {
-         int m=text1.length(),n=text2.length();
+    public int longestCommonSubsequence(String text1, String text2)  {
+       int m=text1.length(),n=text2.length();
         int[][] dp=new int[m][n];
         return rec(0,0,text1,text2,dp);
-        
     }
-    int rec(int i,int j,String text1,String text2,int[][] dp)
+        int rec(int i,int j,String text1,String text2,int[][] dp)
     {
         if(i==text1.length() || j==text2.length())
             return 0;
