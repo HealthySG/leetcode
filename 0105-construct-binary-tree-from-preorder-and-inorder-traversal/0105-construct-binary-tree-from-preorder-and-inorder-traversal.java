@@ -19,8 +19,8 @@ class Solution {
         }
         int leftTreeSize=rootIndex-inStart;
         int rightTreeSize=inEnd-rootIndex;
-        System.out.println(leftTreeSize);
-        System.out.println(rightTreeSize);
+        // System.out.println(leftTreeSize);
+        // System.out.println(rightTreeSize);
         rootNode.left=rec(preorder,inorder,inStart,rootIndex-1,preStart+1,preStart+leftTreeSize);       rootNode.right=rec(preorder,inorder,rootIndex+1,inEnd,preStart+leftTreeSize+1,preEnd);
         return rootNode;
     }
