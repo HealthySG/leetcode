@@ -17,7 +17,7 @@ class Solution {
         long sum=0L;
         for(int i=0;i<n;i++)
         {
-           pq.add(p[i].num1);
+           pq.add(p[i].num1); // Collections dynamic size property.
             sum = (sum + p[i].num1);
             if (pq.size() > k) sum -= pq.poll();
             if (pq.size() == k) ans = Math.max(ans, (sum *  p[i].num2));
