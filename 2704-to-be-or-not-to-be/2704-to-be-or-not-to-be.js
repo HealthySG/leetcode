@@ -5,10 +5,10 @@
 var expect = function(val) {
    
    return{
-        x:val,
+
       toBe: function(key)
       {
-            if(key===this.x)
+            if(key===val)
               {
                  return true;
               }
@@ -17,7 +17,7 @@ var expect = function(val) {
           }
       },
     notToBe: function(key){
-        if(key===this.x)
+        if(key===val)
               {
                   throw new Error("Equal");
               }
